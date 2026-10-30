@@ -1,0 +1,112 @@
+{
+ "app": "emd_management",
+ "charts": [],
+ "content": "[{\"id\":\"emdHeader01\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>EMD Management</b></span>\",\"col\":12}},{\"id\":\"scEMD000001\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"EMD\",\"col\":3}},{\"id\":\"scJE0000001\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"scSettings1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"EMD Settings\",\"col\":3}},{\"id\":\"emdHeader02\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters &amp; Settings</b></span>\",\"col\":12}},{\"id\":\"cardEMD0001\",\"type\":\"card\",\"data\":{\"card_name\":\"EMD\",\"col\":4}},{\"id\":\"cardSetting\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "creation": "2026-10-30 12:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "wallet",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "EMD Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "EMD",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "EMD",
+   "link_count": 0,
+   "link_to": "EMD",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "EMD Settings",
+   "link_count": 0,
+   "link_to": "EMD Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EMD Management",
+ "name": "EMD Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "EMD",
+   "link_to": "EMD",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Journal Entry",
+   "link_to": "Journal Entry",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "EMD Settings",
+   "link_to": "EMD Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "EMD Management",
+ "type": "Workspace"
+}

@@ -1,0 +1,30 @@
+{
+ "app": "emd_management",
+ "bg_color": "blue",
+ "creation": "2026-10-30 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "wallet",
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "EMD Management",
+ "link_to": "EMD Management",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/emd_management/images/emd-management-logo.svg",
+ "modified": "2026-10-30 12:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "EMD Management",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sidebar": "EMD Management",
+ "standard": 1
+}

@@ -11,15 +11,18 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "emd_management",
-# 		"logo": "/assets/emd_management/logo.png",
-# 		"title": "EMD Management",
-# 		"route": "/emd_management",
-# 		"has_permission": "emd_management.api.permission.has_app_permission",
-# 	}
-# ]
+app_logo_url = "/assets/emd_management/images/emd-management-logo.svg"
+app_home = "/desk/emd-management"
+
+add_to_apps_screen = [
+	{
+		"name": app_name,
+		"logo": app_logo_url,
+		"title": app_title,
+		"route": app_home,
+		"has_permission": "emd_management.permission.has_app_permission",
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to
@@ -96,7 +99,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "emd_management.install.before_install"
-# after_install = "emd_management.install.after_install"
+after_install = "emd_management.install.after_install"
+after_migrate = "emd_management.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -277,3 +281,43 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# EMD Management hooks (from version-15)
+# ---------------------------------------
+
+doctype_list_js = {"EMD": "emd_management/emd_management/doctype/emd/emd_list.js"}
+doctype_js = {"Journal Entry": "public/js/journal_entry.js"}
+
+doc_events = {
+	"Journal Entry": {"on_cancel": "emd_management.emd_management.doc_events.journal_entry.on_cancel"},
+	"EMD": {"validate": "emd_management.emd_management.doctype.emd.emd.validate"},
+}
+
+scheduler_events = {
+	"weekly": ["emd_management.emd_management.doctype.emd.emd.send_emails"],
+	"daily": ["emd_management.emd_management.doctype.emd.emd.change_status_on_due"],
+}
+
+fixtures = [
+	{
+		"dt": "Property Setter",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+					"EMD-payment_mode-hidden",
+					"EMD-payment_mode-reqd",
+					"EMD-receipient-fetch_from",
+					"EMD-naming_series-options",
+					"EMD-cost_center-fetch_from",
+					"EMD-write_off_account-allow_on_submit",
+					"EMD-bank_account-depends_on",
+					"EMD-cancel_forfeited-depends_on",
+					"EMD-cost_center-fetch_if_empty",
+					"EMD-reference_date-default",
+				],
+			]
+		],
+	},
+]
